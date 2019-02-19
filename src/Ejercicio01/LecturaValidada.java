@@ -14,12 +14,15 @@ public class LecturaValidada{
 		
 		try {
 			
+			System.out.print("Número entero\n");
+			System.out.print("Número: ");
 			a = sc.nextInt();
 			
 		}
 		catch (InputMismatchException exc) {
 			
-			a = -1;
+			// Excepción por defecto (no se ha introducido un número)
+			a = -404;
 			
 		}
 		
@@ -36,6 +39,8 @@ public class LecturaValidada{
 		
 		try {
 			
+			System.out.print("Número entero dentro de rango\n");
+			System.out.print("Número: ");
 			a = sc.nextInt();
 			
 			if (a < 2 || a > 5) {
@@ -45,6 +50,44 @@ public class LecturaValidada{
 			}
 		}
 		catch (ExcepcionNumeroDentroRango exc) {
+			
+			// Excepción personalizada (numero dentro de rango)
+			a = -1;
+			
+		}
+		catch (InputMismatchException exc) {
+			
+			// Excepción por defecto (no se ha introducido un número)
+			a = -2;
+			
+		}
+		
+		return a;
+	}
+	
+	// Leer número real
+	
+	// Leer número real positivo
+	public double leerNumeroReal () {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		double a;
+		
+		try {
+			
+			System.out.print("Número real\n");
+			System.out.print("Número: ");
+			a = sc.nextDouble();
+			
+			if (a < 0) {
+				
+				throw new ExcepcionNumeroRealPositivo();
+				
+			}
+			
+		}
+		catch (ExcepcionNumeroRealPositivo exc) {
 			
 			a = -1;
 			
@@ -56,11 +99,8 @@ public class LecturaValidada{
 		}
 		
 		return a;
-		
 	}
 	
-	// Leer número real
-
 	// Leer número real positivo
 
 	// Leer número real dentro de rango
