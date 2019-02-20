@@ -46,6 +46,8 @@ public class Principal {
 			
 		} while (!opcionCorrecta);
 
+		
+		
 		switch(opcion) {
 		case 0:
 			break;
