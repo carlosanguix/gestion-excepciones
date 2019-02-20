@@ -2,9 +2,9 @@ package ejercicio03;
 
 public class ExcepcionNumeroFueraDeRango extends Exception {
 
-	public String mensajeDeError () {
+	public String mensajeDeError (int opcion) {
 		
-		return "Elige una opción correcta";
+		return "La opcion elegida es: " + opcion;
 	}
 	
 }

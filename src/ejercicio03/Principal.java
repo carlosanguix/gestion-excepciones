@@ -1,10 +1,12 @@
 package ejercicio03;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Principal {
 
 	private static int menu(Scanner teclado) {
+		
 		System.out.println(" Menú de Agenda ");
 		System.out.println("--------------------------");
 		System.out.println("1.- Cargar Fichero Agenda");
@@ -15,6 +17,7 @@ public class Principal {
 		System.out.println("0.- Salir");
 		System.out.print("Seleccione [0..5]: ");
 		return teclado.nextInt();
+		
 	}
 
 	public static void main(String[] args) {
@@ -32,6 +35,7 @@ public class Principal {
 				opcion = menu(tec);
 
 				if (opcion < 0 || opcion > 5) {
+					
 					throw new ExcepcionNumeroFueraDeRango();
 				}
 				
@@ -41,7 +45,11 @@ public class Principal {
 			catch (ExcepcionNumeroFueraDeRango e){
 
 				ExcepcionNumeroFueraDeRango exc = new ExcepcionNumeroFueraDeRango();
-				System.out.println(exc.mensajeDeError());
+				System.out.println(exc.mensajeDeError(opcion));
+			}
+			catch (InputMismatchException e) {
+				
+				tec.nextLine();
 			}
 			
 		} while (!opcionCorrecta);
