@@ -16,7 +16,7 @@ public class Principal {
 //		if (vector[0] > 0) {
 //			throw new Exception1();
 //		}
-		
+	
 		// b) En (1) la excepción unchecked IndexOutOfBoundsException.
 //		int num2 = vector[3];
 		
@@ -36,16 +36,16 @@ public class Principal {
 		int[] vector = new int[1];
 
 		// d) En (2) la excepción unchecked InputMismatchException.
-//		vector[0] = sc.nextInt();
+		vector[0] = sc.nextInt();
 		
 		// e) En (2) la excepción unchecked IndexOutOfBoundsException.
-//		try {
-//			vector[1] = sc.nextInt();
-//		}
-//		catch (IndexOutOfBoundsException e) {
-//
-//			System.out.println("texto0");
-//		}
+		try {
+			vector[1] = sc.nextInt();
+		}
+		catch (IndexOutOfBoundsException e) {
+
+			System.out.println("texto0");
+		}
 	}
 
 	static void metodo3 () throws Exception3, Exception1 {
@@ -53,12 +53,12 @@ public class Principal {
 		int[] vector = new int[1];
 		
 		// f ) En (3) la excepción de usuario Excepcion3.
-//		if (vector[0] != 2) {
-//			throw new Exception3();
-//		}
+		if (vector[0] != 2) {
+			throw new Exception3();
+		}
 
-		// g) En (3) la excepción unchecked InputFormatException.
-//		vector[0] = sc.nextInt();
+		// g) En (3) la excepción unchecked InputMismatchtException.
+		vector[0] = sc.nextInt();
 		
 	}
 
