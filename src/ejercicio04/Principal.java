@@ -39,13 +39,13 @@ public class Principal {
 		vector[0] = sc.nextInt();
 		
 		// e) En (2) la excepción unchecked IndexOutOfBoundsException.
-		try {
-			vector[1] = sc.nextInt();
-		}
-		catch (IndexOutOfBoundsException e) {
-
-			System.out.println("texto0");
-		}
+//		try {
+//			vector[1] = sc.nextInt();
+//		}
+//		catch (IndexOutOfBoundsException e) {
+//
+//			System.out.println("texto0");
+//		}
 	}
 
 	static void metodo3 () throws Exception3, Exception1 {
@@ -53,12 +53,12 @@ public class Principal {
 		int[] vector = new int[1];
 		
 		// f ) En (3) la excepción de usuario Excepcion3.
-		if (vector[0] != 2) {
-			throw new Exception3();
-		}
+//		if (vector[0] != 2) {
+//			throw new Exception3();
+//		}
 
 		// g) En (3) la excepción unchecked InputMismatchtException.
-		vector[0] = sc.nextInt();
+//		vector[0] = sc.nextInt();
 		
 	}
 
@@ -69,6 +69,7 @@ public class Principal {
 		// Si fallan en algunas de las excepciones capturadas más abajo y (en este caso),
 		// los métodos (en su "título") lanzan (throws) ese tipo de excepciones en el caso de que fallen,
 		// ese fallo se capturará más en los catch de abajo.
+		
 		try {
 
 			metodo1();
